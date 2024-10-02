@@ -50,6 +50,7 @@ local function publish_package_asset(instance)
 	else
 		warn(err)
 	end
+
 end
 
 local function main()
