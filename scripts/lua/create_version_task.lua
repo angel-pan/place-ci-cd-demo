@@ -30,7 +30,7 @@ end
 
 local function publish_package_asset(instance)
 	local ws = game.Workspace
-	local as = game.AssetService
+	local as = game:GetService("AssetService")
 
 	local requestParameters = {
 		CreatorId = 3706781386,
