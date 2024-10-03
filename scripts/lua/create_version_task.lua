@@ -30,19 +30,19 @@ end
 
 local function publish_package_asset(instance)
 	local ws = game.Workspace
-	local as = game.AssetService
+	local as = game:GetService("AssetService")
 
 	local requestParameters = {
-		CreatorId = 1253904492,
+		CreatorId = 3706781386,
 		CreatorType = Enum.AssetCreatorType.User,
-		Name = "A Lua Library",
-		Description = "hack your game",
+		Name = "Otter",
+		Description = "Declarative animation library for Roblox Lua built around (but not limited to) springs.",
 	}
 	
 	print("creating a new version")
 	local versionId
 	local success, err = pcall(function()
-		result, versionId = as:CreateAssetVersionAsync(instance, Enum.AssetType.Model, 129883978505859, requestParameters)
+		result, versionId = as:CreateAssetVersionAsync(instance, Enum.AssetType.Model, 11566243636, requestParameters)
 	end)
 
 	if success then
@@ -50,6 +50,7 @@ local function publish_package_asset(instance)
 	else
 		warn(err)
 	end
+
 end
 
 local function main()
